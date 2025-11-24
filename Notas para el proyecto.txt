@@ -1,0 +1,7 @@
+Para no repetir el header en todas las paginas lo sacoco a header.php y lo añado luego con include
+Para no repetir el head de estilos en todas las paginas hago head.php y lo añado luego a cada una
+Para no repetir el footer hago lo mismo y añado el scrypt del json y botstrap
+Para no repetir la conexion a la base de datos creo en admin db.php
+
+Cambios en productos para añadir categorias productos.php
+    cambios en admin

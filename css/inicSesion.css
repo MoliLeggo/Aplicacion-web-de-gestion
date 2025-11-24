@@ -1,0 +1,103 @@
+.inicSesion {
+    /*seccion delformulario*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aquamarine;
+    padding: 20px;
+} 
+.registrate {
+    /*seccion delformulario*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aquamarine;
+    padding: 20px;
+}
+.form-container {
+    background-color: rgb(15, 83, 63);
+    padding: 20px;
+    border-radius: 10px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Estilo para las letras del lavel del formulario */
+.form-container label {
+    color: #ffffff;
+    display: block;
+    margin: 10px;
+}
+
+/*Estilo para el relleno de los campos donde se escribe del formulario */
+.form-container input {
+    padding: 10px;
+    border-radius: 5px;
+}
+.form-container a{
+    color: white;
+}
+.boton{
+    padding: 10px;
+}
+.form-container button {
+    padding: 10px;
+    background-color: #eca917;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Contenedor que agrupa el input de contraseña y el botón de mostrar/ocultar */
+.input-con-toggle {
+  display: flex;              
+  align-items: center;        
+  position: relative;        
+}
+
+/* Estilos para el input de contraseña dentro del contenedor */
+.input-con-toggle input {
+  flex: 1;                    
+  padding-right: 40px;       
+}
+
+/* Estilos para el botón que alterna la visibilidad de la contraseña */
+.toggle-btn {
+  position: absolute;         
+  right: 10px;                
+  background: none;          
+  border: none;               
+  cursor: pointer;           
+  font-size: 1em;          
+}
+
+/* BOTON WASAP  */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0f523f;
+  color: white ;
+  font-size: 28px;
+  padding: 12px 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #25d366 ;
+}
+
+.footer-carrito{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
