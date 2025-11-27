@@ -52,9 +52,12 @@ if (isset($_GET['delete'])) {
 $cats = $conn->query("SELECT * FROM categorias ORDER BY nombre ASC");
 ?>
 
-
+<body style="background-color: aquamarine;">
 
 <h2>Administración de categorías</h2>
+<p>
+    <a href="admin_pedidos.php" class="btn btn-secondary">Volver a pedidos</a>
+</p>
 
 <h3>Añadir nueva categoría</h3>
 <form method="POST">

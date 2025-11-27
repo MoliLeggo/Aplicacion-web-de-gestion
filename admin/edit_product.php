@@ -38,28 +38,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit;
 }
 ?>
+<body style="background-color: aquamarine;">
+    <h2>Editar Producto</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value="<?php echo htmlspecialchars($producto['nombre']); ?>" required><br><br>
+        <label>Descripción:</label>
+        <textarea name="descripcion"
+            rows="4"><?php echo htmlspecialchars($producto['descripcion']); ?></textarea><br><br>
+        <label>Precio:</label>
+        <input type="number" name="precio" step="0.01" value="<?php echo $producto['precio']; ?>" required><br><br>
 
-<h2>Editar Producto</h2>
-<form method="POST" enctype="multipart/form-data">
-    <label>Nombre:</label>
-    <input type="text" name="nombre" value="<?php echo htmlspecialchars($producto['nombre']); ?>" required><br><br>
-    <label>Descripción:</label>
-    <textarea name="descripcion" rows="4"><?php echo htmlspecialchars($producto['descripcion']); ?></textarea><br><br>
-    <label>Precio:</label>
-    <input type="number" name="precio" step="0.01" value="<?php echo $producto['precio']; ?>" required><br><br>
-
-    <?php $cats = $conn->query("SELECT nombre FROM categorias ORDER BY nombre ASC"); ?>
-    <label>Categoría:</label>
-    <select name="categoria" required>
-        <?php while ($c = $cats->fetch_assoc()):
-            $nombreCat = $c['nombre'];
-            $sel = ($producto['categoria'] === $nombreCat) ? 'selected' : '';
-            ?>
-            <option value="<?php echo htmlspecialchars($nombreCat); ?>" <?php echo $sel; ?>>
-                <?php echo htmlspecialchars(ucfirst($nombreCat)); ?>
-            </option>
-        <?php endwhile; ?>
-        <!-- <option value="babero" < ?php if($producto['categoria']=="babero") echo "selected"; ?>>Babero</option>
+        <?php $cats = $conn->query("SELECT nombre FROM categorias ORDER BY nombre ASC"); ?>
+        <label>Categoría:</label>
+        <select name="categoria" required>
+            <?php while ($c = $cats->fetch_assoc()):
+                $nombreCat = $c['nombre'];
+                $sel = ($producto['categoria'] === $nombreCat) ? 'selected' : '';
+                ?>
+                <option value="<?php echo htmlspecialchars($nombreCat); ?>" <?php echo $sel; ?>>
+                    <?php echo htmlspecialchars(ucfirst($nombreCat)); ?>
+                </option>
+            <?php endwhile; ?>
+            <!-- <option value="babero" < ?php if($producto['categoria']=="babero") echo "selected"; ?>>Babero</option>
         <option value="etiquetas" < ?php if($producto['categoria']=="etiquetas") echo "selected"; ?>>Etiquetas</option>
         <option value="costurero" < ?php if($producto['categoria']=="costurero") echo "selected"; ?>>Costurero</option>
         <option value="parches" < ?php if($producto['categoria']=="parches") echo "selected"; ?>>Parches</option>
@@ -67,13 +68,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <option value="pasamaneria" < ?php if($producto['categoria']=="pasamaneria") echo "selected"; ?>>Pasamanería</option>
         <option value="hilos" < ?php if($producto['categoria']=="hilos") echo "selected"; ?>>Hilos</option>
         <option value="botones" < ?php if($producto['categoria']=="botones") echo "selected"; ?>>Botones</option> -->
-    </select>
-    <br><br>
+        </select>
+        <br><br>
 
-    <label>Imagen:</label>
-    <input type="file" name="imagen" accept="image/*"><br>
-    <?php if ($producto['imagen']): ?>
-        <img src="<?php echo $producto['imagen']; ?>" width="100" alt="">
-    <?php endif; ?><br><br>
-    <button type="submit">Actualizar Producto</button>
-</form>
+        <label>Imagen:</label>
+        <input type="file" name="imagen" accept="image/*"><br>
+        <?php if ($producto['imagen']): ?>
+            <img src="<?php echo $producto['imagen']; ?>" width="100" alt="">
+        <?php endif; ?><br><br>
+        <button type="submit">Actualizar Producto</button>
+    </form>
+</body>
