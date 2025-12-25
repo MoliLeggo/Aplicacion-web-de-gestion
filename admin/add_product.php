@@ -7,9 +7,7 @@ require 'db.php';
 $nombre = $_POST['nombre'];
 $descripcion = $_POST['descripcion'];
 $precio = $_POST['precio'];
-
 $categoria = $_POST['categoria'];
-
 $imagen_path = null;
 
 if(isset($_FILES['imagen']) && $_FILES['imagen']['error'] === 0){

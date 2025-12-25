@@ -60,14 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php echo htmlspecialchars(ucfirst($nombreCat)); ?>
                 </option>
             <?php endwhile; ?>
-            <!-- <option value="babero" < ?php if($producto['categoria']=="babero") echo "selected"; ?>>Babero</option>
-        <option value="etiquetas" < ?php if($producto['categoria']=="etiquetas") echo "selected"; ?>>Etiquetas</option>
-        <option value="costurero" < ?php if($producto['categoria']=="costurero") echo "selected"; ?>>Costurero</option>
-        <option value="parches" < ?php if($producto['categoria']=="parches") echo "selected"; ?>>Parches</option>
-        <option value="puntillas" < ?php if($producto['categoria']=="puntillas") echo "selected"; ?>>Puntillas</option>
-        <option value="pasamaneria" < ?php if($producto['categoria']=="pasamaneria") echo "selected"; ?>>Pasamanería</option>
-        <option value="hilos" < ?php if($producto['categoria']=="hilos") echo "selected"; ?>>Hilos</option>
-        <option value="botones" < ?php if($producto['categoria']=="botones") echo "selected"; ?>>Botones</option> -->
+           
         </select>
         <br><br>
 

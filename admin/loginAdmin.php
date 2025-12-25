@@ -57,8 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login Admin</title>
 </head>
 
-<body>
-    <h2>Login</h2>
+<body style="background-color: aquamarine;">
+    <h1>Administrador de la aplicacion</h1>
+    <h3>Login</h3>
     <?php if ($errors): ?>
         <ul style="color:red;">
             <?php foreach ($errors as $err)

@@ -9,6 +9,7 @@ require 'db.php';
 // Obtener todos los productos
 $result = $conn->query("SELECT * FROM productos ORDER BY fecha_creacion DESC");
 ?>
+
 <body style="background-color: aquamarine;">
     <h2>Administración de Productos</h2>
 
@@ -26,7 +27,6 @@ $result = $conn->query("SELECT * FROM productos ORDER BY fecha_creacion DESC");
         <label>Precio:</label>
         <input type="number" name="precio" step="0.01" required><br><br>
 
-
         <?php
         $cats = $conn->query("SELECT nombre FROM categorias ORDER BY nombre ASC");
         ?>
@@ -37,22 +37,13 @@ $result = $conn->query("SELECT * FROM productos ORDER BY fecha_creacion DESC");
                     <?php echo htmlspecialchars(ucfirst($c['nombre'])); ?>
                 </option>
             <?php endwhile; ?>
-            <!-- <option value="babero">Babero</option>
-        <option value="etiquetas">Etiquetas</option>
-        <option value="costurero">Costurero</option>
-        <option value="parches">Parches</option>
-        <option value="puntillas">Puntillas</option>
-        <option value="pasamaneria">Pasamanería</option>
-        <option value="hilos">Hilos</option>
-        <option value="botones">Botones</option> -->
         </select><br><br>
-
         <label>Imagen:</label>
         <input type="file" name="imagen" accept="image/*"><br><br>
         <button type="submit">Añadir Producto</button>
         <p><a href="logoutAdmin.php">Cerrar sesión</a></p>
     </form>
-
+    
     <hr>
 
     <h3>Productos Existentes</h3>
@@ -60,9 +51,7 @@ $result = $conn->query("SELECT * FROM productos ORDER BY fecha_creacion DESC");
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-
             <th>Categoría</th>
-
             <th>Imagen</th>
             <th>Precio</th>
             <th>Acciones</th>
